@@ -1,1 +1,281 @@
-/* No CSS *//*# sourceMappingURL=style.css.map */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+header {
+  background-color: #e1d7c1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1em 1em 1em 1em;
+}
+
+@media screen and (min-width: 320px) and (max-width: 1023px) {
+  header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+header img {
+  width: 10em;
+}
+
+@media screen and (min-width: 320px) and (max-width: 1023px) {
+  header img {
+    margin-bottom: 1em;
+  }
+}
+
+header form {
+  position: relative;
+}
+
+header form .search {
+  font-size: 1.21em;
+  border: solid 0.15em black;
+  border-radius: 0em 0em 0.5em 0.5em;
+  padding: 0.32em;
+  position: absolute;
+  left: -1.8em;
+  top: 0em;
+}
+
+@media screen and (min-width: 320px) and (max-width: 1023px) {
+  header form .search {
+    left: -0.4em;
+  }
+}
+
+header form input {
+  height: 2.8em;
+  max-width: 25em;
+  width: 25em;
+  min-width: 18em;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  border: solid 0.2em black;
+  border-radius: 0em 0.5em 0.5em 0em;
+  outline: none;
+}
+
+@media screen and (min-width: 320px) and (max-width: 1023px) {
+  header form input {
+    margin-left: 2em;
+    width: 18em;
+  }
+}
+
+header .shop:hover {
+  text-decoration: underline;
+}
+
+header a {
+  font-size: 1.5em;
+  font-family: "Anton", sans-serif;
+}
+
+@media screen and (min-width: 320px) and (max-width: 1023px) {
+  header a {
+    margin-top: 1em;
+  }
+}
+
+header a i {
+  padding-right: 0.5em;
+}
+
+footer {
+  background-color: #593f36;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 1em 1em 1em 1em;
+}
+
+@media screen and (min-width: 320px) and (max-width: 1023px) {
+  footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+  }
+}
+
+footer h2 {
+  font-family: "Anton", sans-serif;
+  font-size: 1.3em;
+  color: #e1d7c1;
+  padding: 0em 0em 1em 0em;
+  text-decoration: underline;
+}
+
+@media screen and (min-width: 320px) and (max-width: 1023px) {
+  footer h2 {
+    padding-top: 1em;
+  }
+}
+
+footer a {
+  font-family: "IM Fell English";
+  color: white;
+  line-height: 1.5em;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+/*# sourceMappingURL=style.css.map */

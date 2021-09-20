@@ -1,0 +1,71 @@
+header {
+    background-color: $color-primary;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em 1em 1em 1em;
+
+    @media screen and (min-width: 320px) and (max-width: 1023px) {
+        display: flex;
+        flex-direction: column;
+    }
+
+    img {
+        width:10em;
+
+        @media screen and (min-width: 320px) and (max-width: 1023px) {
+            margin-bottom: 1em;
+        }
+    }
+
+    form{
+        position: relative;
+
+        .search {
+            font-size: 1.21em;
+            border: solid 0.15em black;
+            border-radius: 0em 0em 0.5em 0.5em;
+            padding: 0.32em;
+            position: absolute;
+            left: -1.8em;
+            top: 0em;
+
+            @media screen and (min-width: 320px) and (max-width: 1023px) {
+                left: -0.4em;
+            }
+        }
+    
+        input{
+            height: 2.8em;
+            max-width: 25em;
+            width: 25em;
+            min-width: 18em;
+            flex-wrap: wrap;
+            border: solid 0.2em black;
+            border-radius: 0em 0.5em 0.5em 0em;
+            outline: none;
+
+            @media screen and (min-width: 320px) and (max-width: 1023px) {
+                margin-left: 2em;
+                width: 18em;
+            }
+        }
+    }
+
+    .shop:hover {
+        text-decoration: underline;
+    }
+
+    a{
+        font-size: 1.5em;
+        font-family: $font-title;
+        
+        @media screen and (min-width: 320px) and (max-width: 1023px) {
+            margin-top: 1em;
+        }
+
+        i{
+            padding-right: 0.5em;
+        }
+    }
+}

@@ -1,0 +1,35 @@
+footer {
+    background-color: $color-secondary;
+    display: flex;
+    justify-content: space-between;
+    padding: 1em 1em 1em 1em;
+
+        @media screen and (min-width: 320px) and (max-width: 1023px) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+    h2 {
+        font-family: $font-title;
+        font-size: 1.3em;
+        color: $color-primary;
+        padding: 0em 0em 1em 0em;
+        text-decoration: underline;
+
+            @media screen and (min-width: 320px) and (max-width: 1023px) {
+                padding-top: 1em;
+            }
+    }
+
+    a {
+        font-family: $font-text;
+        color: white;
+        line-height: 1.5em;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}

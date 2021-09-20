@@ -1,12 +1,67 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
-</html>
+    <html lang="fr">
+
+        <head>
+            <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <meta name="description" content="Oriwood est une boutique en ligne dans la vente de mueble vintage">
+            <title>OriWood by Orinoco</title>
+            
+            <script src="https://kit.fontawesome.com/0ceb91f2c8.js" crossorigin="anonymous"></script>
+
+            <link rel="stylesheet" href="./frontend/css/style.css">
+            <link href="https://fonts.googleapis.com/css2?family=Anton&family=IM+Fell+English&family=Roboto+Mono:wght@300&display=swap" rel="stylesheet"> 
+            <link rel="shortcut icon" href="#">
+        </head>
+
+        <body>
+            <main>
+                <header>
+                    <a href="index.html"><img src="./frontend/pictures/logo.png" alt="Logo - OriWood by Orinoco - Boutique en ligne de meuble vintage"/></a>
+
+                    <form>
+                        <label for="search"><i class="fas fa-search fa-rotate-90 search"></i></label>
+                        <input type="search" name="search" id="search"/>
+                    </form>
+
+                    <a href="frontend/pages/shop.html" class="shop"><i class="fas fa-shopping-cart"></i> Panier</a>
+                </header>
+
+                <img id="fond" src="./frontend/pictures/ban.jpg" alt=""/>
+
+                <section class="product-list">
+                    <a href="frontend/pages/product.html"><h1>Nos produits OriWood</h1></a>
+
+                    <aside class="products-error">
+                    </aside>
+
+                    <div class="products">
+                    </div>
+                </section>
+
+                <footer>
+                    <ul>
+                        <li><h2>Aide</h2></li>
+                        <li><a href="#">Contacts</a></li>
+                        <li><a href="#">Faqs</a></li>
+                    </ul>
+
+                    <ul>
+                        <li><h2>Informations</h2></li>
+                        <li><a href="#">A propos</a></li>
+                        <li><a href="#">Politiques de confidentialités</a></li>
+                    </ul>
+
+                    <ul>
+                        <li><h2>Services</h2></li>
+                        <li><a href="#">Expédition en 24h</a></li>
+                        <li><a href="#">Paiement sécurisé</a></li>
+                    </ul>
+                </footer>
+            </main>
+
+            <script src="/frontend/script/main.js"></script>
+        </body>
+
+    </html>
