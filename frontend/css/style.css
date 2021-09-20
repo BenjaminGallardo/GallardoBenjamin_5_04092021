@@ -278,4 +278,137 @@ footer a {
 footer a:hover {
   text-decoration: underline;
 }
+
+#fond {
+  width: 100%;
+  height: 200px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.product-list {
+  padding: 1em 1em 1em 1em;
+}
+
+@media screen and (min-width: 1440px) {
+  .product-list {
+    margin: 0em 15em 0em 15em;
+  }
+}
+
+.product-list h1 {
+  font-family: "Anton", sans-serif;
+  font-size: 2.5em;
+  text-align: center;
+  text-decoration: underline;
+}
+
+.product-list .products {
+  padding: 3em 0em 3em 0em;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  gap: 1em;
+  text-align: center;
+  margin: auto;
+}
+
+@media screen and (max-width: 1024px) {
+  .product-list .products {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.product-list .products a:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+.product-list .products figure {
+  background-color: #e1d7c1;
+  border: solid 0.5em #e1d7c1;
+  border-radius: 1em;
+  -o-object-fit: cover;
+     object-fit: cover;
+  overflow: hidden;
+}
+
+.product-list .products figure img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  overflow: hidden;
+  height: 14em;
+  width: 100%;
+  border-radius: 1em;
+}
+
+.product-list .products figure figcaption {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 1em 0em 0.3em 0em;
+}
+
+.product-list .products figure figcaption :nth-child(1) {
+  font-family: "IM Fell English";
+  font-size: 1.2em;
+}
+
+.product-list .products figure figcaption :nth-child(2) {
+  font-family: "Anton", sans-serif;
+}
+
+.product-list .products #most-arrow {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: "IM Fell English";
+}
+
+.product-list .products-error {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 50vh;
+}
+
+.product-list .products-error p {
+  text-align: center;
+  font-family: "IM Fell English";
+  font-size: 18px;
+  font-style: oblique;
+  background-color: #e1d7c1;
+  padding: 1em;
+  border: solid 3px black;
+  border-radius: 1em;
+  -webkit-box-shadow: 0px 5px 5px #b4b2b2;
+          box-shadow: 0px 5px 5px #b4b2b2;
+}
 /*# sourceMappingURL=style.css.map */
