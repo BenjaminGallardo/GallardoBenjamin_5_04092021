@@ -461,6 +461,7 @@ footer a:hover {
   width: 100%;
   border: solid 1.5em #593f36;
   border-radius: 1em;
+  max-height: 400px;
 }
 
 .contain-product figcaption {
