@@ -411,4 +411,446 @@ footer a:hover {
   -webkit-box-shadow: 0px 5px 5px #b4b2b2;
           box-shadow: 0px 5px 5px #b4b2b2;
 }
+
+.contain-product {
+  background-image: url("../pictures/ban.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 2em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: "IM Fell English";
+}
+
+@media screen and (min-width: 1440px) {
+  .contain-product {
+    padding: 10em;
+  }
+}
+
+.contain-product figure {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media screen and (max-width: 1024px) {
+  .contain-product figure {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+  }
+}
+
+.contain-product figure img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  overflow: hidden;
+  width: 100%;
+  border: solid 1.5em #593f36;
+  border-radius: 1em;
+}
+
+.contain-product figcaption {
+  margin-left: 1.5em;
+  width: 80%;
+}
+
+@media screen and (max-width: 1024px) {
+  .contain-product figcaption {
+    width: 100%;
+    margin: 1em 0 0;
+  }
+}
+
+.contain-product figcaption h3 {
+  text-decoration: underline;
+}
+
+.contain-product figcaption .title-price {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #e1d7c1;
+  border-radius: 1em;
+  padding: 1em;
+}
+
+.contain-product figcaption .title-price h2 {
+  font-family: "Anton", sans-serif;
+  font-size: 20px;
+}
+
+.contain-product figcaption .title-price p {
+  font-family: "Roboto Mono", monospace;
+  font-size: 15px;
+}
+
+.contain-product figcaption .description-product {
+  background-color: #e1d7c1;
+  border-radius: 1em;
+  padding: 1em;
+  margin: 1em 0;
+}
+
+.contain-product figcaption .description-product h3 {
+  padding-bottom: 0.5em;
+}
+
+.contain-product figcaption form {
+  background-color: #e1d7c1;
+  border-radius: 1em 1em 0 0;
+  padding: 1em;
+}
+
+.contain-product figcaption form label {
+  text-decoration: underline;
+}
+
+.contain-product figcaption form input {
+  width: 3em;
+  margin-left: 0.5em;
+}
+
+.contain-product figcaption .color-choice {
+  background-color: #e1d7c1;
+  border-radius: 0 0 1em 1em;
+  padding: 0 1em 1em 1em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media screen and (max-width: 1024px) {
+  .contain-product figcaption .color-choice {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: initial;
+        -ms-flex-align: initial;
+            align-items: initial;
+  }
+}
+
+.contain-product figcaption .container-color {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.contain-product figcaption .container-color .color {
+  background-color: black;
+  width: 40px;
+  height: 40px;
+  border-radius: 0.5em;
+  margin: 0.5em 1em 0 0.5em;
+  cursor: pointer;
+}
+
+.contain-product figcaption .container-color .color:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.contain-product figcaption .container-color .tan {
+  background-color: #d2b48c;
+}
+
+.contain-product figcaption .container-color .chocolate {
+  background-color: #5a3a22;
+}
+
+.contain-product figcaption .container-color .white {
+  background-color: white;
+}
+
+.contain-product figcaption .product-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 1em;
+}
+
+@media screen and (max-width: 1024px) {
+  .contain-product figcaption .product-menu {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+.contain-product figcaption .product-menu button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 1em;
+  border: none;
+  border-radius: 0.5em;
+  background-color: #e1d7c1;
+  cursor: pointer;
+  font-family: "IM Fell English";
+  font-size: 14px;
+  width: 15em;
+  margin: 0 1em 1em 0;
+}
+
+.contain-product figcaption .product-menu button i {
+  margin: 0 0.5em;
+}
+
+.contain-product figcaption .product-menu button:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+.container-shop {
+  background-image: url("../pictures/ban.jpg");
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media screen and (min-width: 1440px) {
+  .container-shop {
+    height: 80vh;
+  }
+}
+
+.container-shop h1 {
+  display: none;
+}
+
+.container-shop .priceandcommand {
+  background-color: #593f36;
+  border-radius: 1em;
+  margin: 2em;
+  width: 50%;
+}
+
+@media screen and (max-width: 1024px) {
+  .container-shop .priceandcommand {
+    width: 90%;
+  }
+}
+
+.container-shop .table-price {
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0 1em;
+}
+
+.container-shop .table-price h2 {
+  font-size: 23px;
+  font-family: "Anton", sans-serif;
+  margin: 1em;
+}
+
+.container-shop .table-price table {
+  border: 2px solid white;
+  border-spacing: 1em;
+  width: 100%;
+}
+
+.container-shop .table-price table tr {
+  border: 2px solid white;
+  padding: 1em;
+}
+
+.container-shop .table-price table td {
+  padding: 0.5em;
+  text-align: center;
+}
+
+.container-shop .command {
+  background-color: #e1d7c1;
+  border-radius: 1em;
+  margin: 1em;
+  font-family: "IM Fell English";
+}
+
+.container-shop .command h2 {
+  font-family: "Anton", sans-serif;
+  text-align: center;
+  padding-top: 1em;
+  font-size: 20px;
+  text-decoration: underline;
+}
+
+.container-shop .command form {
+  margin: 1em 0;
+  padding: 0 1em;
+}
+
+.container-shop .command form .formstyle {
+  padding: 0.5em 0em 0em 0em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
+}
+
+.container-shop .command form .valid {
+  width: 20px;
+  position: absolute;
+  top: 1.7em;
+  right: 0.2em;
+  display: none;
+}
+
+.container-shop .command form .error {
+  width: 15px;
+  position: absolute;
+  top: 1.75em;
+  right: 0.4em;
+  display: none;
+}
+
+.container-shop .command .buttonstyle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.container-shop .command .buttonstyle button {
+  background-color: #593f36;
+  border: solid 2px black;
+  border-radius: 1em;
+  margin: 0 1em 1em;
+  padding: 0.5em;
+  font-family: "Anton", sans-serif;
+  color: #e1d7c1;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.container-shop .command .buttonstyle button:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+.recap-command {
+  background-image: url("../pictures/ban.jpg");
+  background-size: cover;
+  height: 80vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.recap-command .recap {
+  background-color: #e1d7c1;
+  border-radius: 1em;
+  padding: 1em 1em;
+  margin: 0 1em;
+}
+
+.recap-command .recap h1 {
+  font-family: "Anton", sans-serif;
+  text-align: center;
+  padding-bottom: 1em;
+  font-size: 30px;
+}
+
+.recap-command .recap h2 {
+  font-family: "IM Fell English";
+  font-size: 18px;
+  padding-bottom: 1em;
+  text-decoration: underline;
+}
+
+.recap-command .recap ul {
+  margin-bottom: 1em;
+  font-family: "IM Fell English";
+}
+
+.recap-command .recap ul em {
+  font-family: "Roboto Mono", monospace;
+  font-size: 14px;
+}
+
+.recap-command .recap h3 {
+  margin-bottom: 1em;
+  font-size: 18px;
+  font-weight: bold;
+  font-family: "Roboto Mono", monospace;
+}
+
+.recap-command .recap p {
+  font-family: "IM Fell English";
+}
 /*# sourceMappingURL=style.css.map */

@@ -106,3 +106,353 @@
 }
 
 //Fin de la PAGE INDEX
+// Réalisation de la PAGE PRODUIT
+
+.contain-product {
+    background-image: url('../pictures/ban.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: $font-text;
+
+    @include laptopM {
+        padding: 10em;
+    }
+
+    figure {
+        display: flex;
+        align-items: center;
+
+        @include mobile {
+            flex-direction: column;
+            width: 100%;
+        }
+
+        img {
+            object-fit: cover;
+            overflow: hidden;
+            width: 100%;
+            border: solid 1.5em $color-secondary;
+            border-radius: 1em;
+        }
+    }
+
+    figcaption {
+        margin-left: 1.5em;
+        width: 80%;
+
+        @include mobile {
+            width: 100%;
+            margin: 1em 0 0;
+        }
+
+        h3 {
+            text-decoration: underline;
+        }
+
+        .title-price {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: $color-primary;
+            border-radius: 1em;
+            padding: 1em;
+
+            h2 {
+                font-family: $font-title;
+                font-size: 20px;
+            }
+
+            p {
+                font-family: $font-price;
+                font-size: 15px;
+            }
+        }
+
+        .description-product {
+            background-color: $color-primary;
+            border-radius: 1em;
+            padding: 1em;
+            margin: 1em 0;
+
+            h3 {
+                padding-bottom: 0.5em;
+            }
+        }
+
+        form {
+            background-color: $color-primary;
+            border-radius: 1em 1em 0 0;
+            padding: 1em;
+
+            label {
+                text-decoration: underline;
+            }
+
+            input {
+                width: 3em;
+                margin-left: 0.5em;
+            }
+        }
+
+        .color-choice {
+            background-color: $color-primary;
+            border-radius: 0 0 1em 1em;
+            padding: 0 1em 1em 1em;
+            display: flex;
+            align-items: center;
+
+            @include mobile {   
+                flex-direction: column;
+                align-items: initial;
+            }
+        }
+
+        .container-color {
+            display: flex;
+
+            .color {
+                background-color: black;
+                width: 40px;
+                height: 40px;
+                border-radius: 0.5em;
+                margin: 0.5em 1em 0 0.5em;
+                cursor: pointer;
+
+                &:hover {
+                    transform: scale(1.1);
+                }
+            }
+
+            .tan {
+                background-color: #d2b48c ;
+            }
+
+            .chocolate {
+                background-color: #5a3a22 ;
+            }
+
+            .white {
+                background-color: rgb(255, 255, 255);
+            }
+        }
+
+        .product-menu {
+            display: flex;
+            justify-content: center;
+            margin-top: 1em;
+
+            @include mobile {   
+                flex-direction: column;
+                align-items: center;
+            }
+
+            button {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 1em;
+                border: none;
+                border-radius: 0.5em;
+                background-color: $color-primary;
+                cursor: pointer;
+                font-family: $font-text;
+                font-size: 14px;
+                width: 15em;
+                margin: 0 1em 1em 0;
+
+                i {
+                    margin: 0 0.5em;
+                }
+
+                &:hover {
+                    transform: scale(1.05);
+                }
+            }
+        }
+    }
+}
+
+// Fin de la page produit
+// Début de la PAGE PANIER
+
+.container-shop{
+    background-image: url('../pictures/ban.jpg');
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    @include laptopM {
+        height: 80vh;
+    }
+
+    h1{
+       display: none;
+    }
+
+    .priceandcommand {
+        background-color: $color-secondary;
+        border-radius: 1em;
+        margin: 2em;
+        width: 50%;
+
+        @include mobile {
+            width: 90%;
+        }
+    }
+
+    .table-price {
+        color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 0 1em;
+
+        h2 {
+            font-size: 23px;
+            font-family: $font-title;
+            margin: 1em;
+        }
+
+        table {
+            border: 2px solid white;
+            border-spacing: 1em;
+            width: 100%;
+
+            tr {
+                border: 2px solid white;
+                padding: 1em;
+            }
+
+            td {
+                padding: 0.5em;
+                text-align: center;
+            }
+        }
+    }
+    
+    .command {
+        background-color: $color-primary;
+        border-radius: 1em;
+        margin: 1em;
+        font-family: $font-text;
+
+        h2 {
+            font-family: $font-title;
+            text-align: center;
+            padding-top: 1em;
+            font-size: 20px;
+            text-decoration: underline;
+        }
+
+        form {
+            margin: 1em 0;
+            padding: 0 1em;
+
+            .formstyle {
+                padding: 0.5em 0em 0em 0em;
+                display: flex;
+                flex-direction: column;
+                position: relative;
+            }
+
+            .valid {
+                width: 20px;
+                position: absolute;
+                top: 1.7em;
+                right: 0.2em;
+                display: none;
+            }
+
+            .error {
+                width: 15px;
+                position: absolute;
+                top: 1.75em;
+                right: 0.4em;
+                display: none;
+            }
+        }
+
+        .buttonstyle {
+            display: flex;
+            justify-content: center;
+
+            button {
+                background-color: $color-secondary;
+                border: solid 2px black;
+                border-radius: 1em;
+                margin: 0 1em 1em;
+                padding: 0.5em;
+                font-family: $font-title;
+                color: $color-primary;
+                cursor: pointer;
+                font-size: 20px;
+
+                &:hover {
+                    transform: scale(1.05);
+                }
+            }
+        }
+    }
+}
+
+// Fin de la page panier
+// Début de la RECAPITULATIF
+
+.recap-command {
+    background-image: url('../pictures/ban.jpg');
+    background-size: cover;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .recap {
+        background-color: $color-primary;
+        border-radius: 1em;
+        padding: 1em 1em;
+        margin: 0 1em;
+
+        h1 {
+            font-family: $font-title;
+            text-align: center;
+            padding-bottom: 1em;
+            font-size: 30px;
+        }
+
+        h2 {
+            font-family: $font-text;
+            font-size: 18px;
+            padding-bottom: 1em;
+            text-decoration: underline;
+        }
+
+        ul {
+            margin-bottom: 1em;
+            font-family: $font-text;
+
+            em {
+                font-family: $font-price;
+                font-size: 14px;
+            }
+        }
+
+        h3 {
+            margin-bottom: 1em;
+            font-size: 18px;
+            font-weight: bold;
+            font-family: $font-price;
+        }
+
+        p {
+            font-family: $font-text;
+        }
+    }
+} 

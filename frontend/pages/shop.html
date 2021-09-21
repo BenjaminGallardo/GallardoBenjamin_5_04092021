@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+    <html lang="fr">
+
+        <head>
+            <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <meta name="description" content="Oriwood est une boutique en ligne dans la vente de mueble vintage">
+            <title>OriWood : Paniers</title>
+            
+            <script src="https://kit.fontawesome.com/0ceb91f2c8.js" crossorigin="anonymous"></script>
+            
+
+            <link rel="stylesheet" href="../css/style.css">
+            <link href="https://fonts.googleapis.com/css2?family=Anton&family=IM+Fell+English&family=Roboto+Mono:wght@300&display=swap" rel="stylesheet">  
+        </head>
+
+        <body>
+            <main>
+                <header>
+                    <a href="../../index.html"><img src="../pictures/logo.png" alt="Logo - OriWood by Orinoco - Boutique en ligne de meuble vintage"/></a>
+
+                    <form method="POST">
+                        <label for="search"><i class="fas fa-search fa-rotate-90 search"></i></label>
+                        <input type="search" name="search" id="search"/>
+                    </form>
+
+                    <a href="shop.html"><i class="fas fa-shopping-cart"></i> Panier</a>
+                </header>
+
+                <section class="container-shop">
+                    
+                    <h1>Oriwood Page Panier</h1>
+
+                    <div class="priceandcommand">
+                        <article class="table-price">
+                            <h2>Votre Panier</h2>
+
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <td>Produit(s)</td>
+                                        <td>Quantitée</td>
+                                        <td>Prix</td>
+                                        <td>Total</td>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Cross Table</td>
+                                        <td>2</td>
+                                        <td>1000€</td>
+                                        <td>2000€</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </article>
+
+                        <article class="command">
+                            <h2>Passez votre commande</h2>
+
+                            <form method="POST">
+                                <div class="formstyle">
+                                    <label for="lastname">Nom :</label>
+                                    <input type="text" name="name" id="lastname">
+                                    <img src="../pictures/valid.png" alt="valid" class="valid">
+                                    <img src="../pictures/error.png" alt="valid" class="error">
+                                </div>
+
+                                <div class="formstyle">
+                                    <label for="firstname">Prénom :</label>
+                                    <input type="text" name="firstname" id="firstname">
+                                    <img src="../pictures/valid.png" alt="valid" class="valid">
+                                    <img src="../pictures/error.png" alt="valid" class="error">
+                                </div>
+
+                                <div class="formstyle">
+                                    <label for="address">Adresse :</label>
+                                    <input type="text" name="address" id="address">
+                                    <img src="../pictures/valid.png" alt="valid" class="valid">
+                                    <img src="../pictures/error.png" alt="valid" class="error">
+                                </div>
+
+                                <div class="formstyle">
+                                    <label for="zipcode">Code Postal : </label>
+                                    <input type="text" name="zipcode" id="zipcode">
+                                    <img src="../pictures/valid.png" alt="valid" class="valid">
+                                    <img src="../pictures/error.png" alt="valid" class="error">
+                                </div>
+
+                                <div class="formstyle">
+                                    <label for="city">Ville : </label>
+                                    <input type="text" name="city" id="city">
+                                    <img src="../pictures/valid.png" alt="valid" class="valid">
+                                    <img src="../pictures/error.png" alt="valid" class="error">
+                                </div>
+
+                                <div class="formstyle">
+                                    <label for="email">Email :</label>
+                                    <input type="email" name="email" id="email">
+                                    <img src="../pictures/valid.png" alt="valid" class="valid">
+                                    <img src="../pictures/error.png" alt="valid" class="error">
+                                </div>
+                            </form>
+
+                            <div class="buttonstyle">
+                                <a href="summary.html"><button type="submit">Procéder au paiement</button></a>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+
+                <footer>
+                    <ul>
+                        <li><h2>Aide</h2></li>
+                        <li><a href="#">Contacts</a></li>
+                        <li><a href="#">Faqs</a></li>
+                    </ul>
+
+                    <ul>
+                        <li><h2>Informations</h2></li>
+                        <li><a href="#">A propos de</a></li>
+                        <li><a href="#">Politiques de confidentialités</a></li>
+                    </ul>
+
+                    <ul>
+                        <li><h2>Services</h2></li>
+                        <li><a href="#">Expédition en 24h</a></li>
+                        <li><a href="#">Paiement sécurisé</a></li>
+                    </ul>
+                </footer>
+            </main>
+
+            <script src="../script/shop.js"></script>
+        </body>
+
+    </html>
