@@ -29,7 +29,7 @@ async function pageProduct (){
         nameProduct.innerText = `${product.name}`;
 
         let priceProduct = document.querySelector('.title-price p');
-        priceProduct.innerText = `${product.price/100} €`;
+        priceProduct.innerText = `${product.price/100}€`;
 
         let descriptionProduct = document.querySelector('.description-product p');
         descriptionProduct.innerText = `${product.description}`;

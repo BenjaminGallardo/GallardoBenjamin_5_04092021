@@ -186,7 +186,7 @@
 
         form {
             background-color: $color-primary;
-            border-radius: 1em 1em 0 0;
+            border-radius: 1em;
             padding: 1em;
 
             label {
@@ -200,44 +200,10 @@
         }
 
         .color-choice {
-            background-color: $color-primary;
-            border-radius: 0 0 1em 1em;
-            padding: 0 1em 1em 1em;
-            display: flex;
-            align-items: center;
+            margin-top: 1em;
 
-            @include mobile {   
-                flex-direction: column;
-                align-items: initial;
-            }
-        }
-
-        .container-color {
-            display: flex;
-
-            .color {
-                background-color: black;
-                width: 40px;
-                height: 40px;
-                border-radius: 0.5em;
-                margin: 0.5em 1em 0 0.5em;
-                cursor: pointer;
-
-                &:hover {
-                    transform: scale(1.1);
-                }
-            }
-
-            .tan {
-                background-color: #d2b48c ;
-            }
-
-            .chocolate {
-                background-color: #5a3a22 ;
-            }
-
-            .white {
-                background-color: rgb(255, 255, 255);
+            label {
+                margin-right: 0.5em;
             }
         }
 

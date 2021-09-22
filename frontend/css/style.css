@@ -518,7 +518,7 @@ footer a:hover {
 
 .contain-product figcaption form {
   background-color: #e1d7c1;
-  border-radius: 1em 1em 0 0;
+  border-radius: 1em;
   padding: 1em;
 }
 
@@ -532,59 +532,11 @@ footer a:hover {
 }
 
 .contain-product figcaption .color-choice {
-  background-color: #e1d7c1;
-  border-radius: 0 0 1em 1em;
-  padding: 0 1em 1em 1em;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  margin-top: 1em;
 }
 
-@media screen and (max-width: 1024px) {
-  .contain-product figcaption .color-choice {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: initial;
-        -ms-flex-align: initial;
-            align-items: initial;
-  }
-}
-
-.contain-product figcaption .container-color {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.contain-product figcaption .container-color .color {
-  background-color: black;
-  width: 40px;
-  height: 40px;
-  border-radius: 0.5em;
-  margin: 0.5em 1em 0 0.5em;
-  cursor: pointer;
-}
-
-.contain-product figcaption .container-color .color:hover {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
-}
-
-.contain-product figcaption .container-color .tan {
-  background-color: #d2b48c;
-}
-
-.contain-product figcaption .container-color .chocolate {
-  background-color: #5a3a22;
-}
-
-.contain-product figcaption .container-color .white {
-  background-color: white;
+.contain-product figcaption .color-choice label {
+  margin-right: 0.5em;
 }
 
 .contain-product figcaption .product-menu {

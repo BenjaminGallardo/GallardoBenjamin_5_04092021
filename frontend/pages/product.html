@@ -25,7 +25,7 @@
                         <input type="search" name="search" id="search"/>
                     </form>
 
-                    <a href="shop.html"><i class="fas fa-shopping-cart"></i> Panier</a>
+                    <a href="shop.html" class="shop"><i class="fas fa-shopping-cart"></i> Panier</a>
                 </header>
 
                 <section class="contain-product">
@@ -45,18 +45,17 @@
                             <form>
                                 <label for="quantity">Quantité :</label>
                                 <input type="number" name="quantity" id="quantity">
-                            </form>
 
-                            <div class="color-choice">
-                                <h3>Vernis :</h3>
-
-                                <div class="container-color">
-                                    <div class="color tan"></div>
-                                    <div class="color chocolate"></div>
-                                    <div class="color"></div>
-                                    <div class="color white"></div>
+                                <div class="color-choice">
+                                    <label for="varnish">Vernis du produit :</label>
+                                    <select name="varnish" id="option-varnish">
+                                        <option value="0">Tan</option>
+                                        <option value="1">Chocolate</option>
+                                        <option value="2">Black</option>
+                                        <option value="3">White</option>
+                                    </select>
                                 </div>
-                            </div>
+                            </form>
 
                             <div class="product-menu">
                                 <a href="../../index.html"><button><i class="fas fa-sign-in-alt fa-rotate-180"></i> Retourner à l'accueil</button></a>
