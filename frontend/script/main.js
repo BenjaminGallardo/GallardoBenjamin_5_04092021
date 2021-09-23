@@ -18,7 +18,7 @@ function main (){
             for(const product of resultApi){
 
                 let linkProduct = document.createElement('a');
-                linkProduct.href = `frontend/pages/product.html?id=${product._id}`;
+                linkProduct.href = `pages/product.html?id=${product._id}`;
                 linkProduct.classList.add('product-listing');
                 divProducts.appendChild(linkProduct);
 

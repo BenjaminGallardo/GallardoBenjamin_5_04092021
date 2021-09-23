@@ -1,14 +1,3 @@
-
-
-
-
-
-
-
-
-
-
-
 form(); // Appel de la fonction de contrôle des données du formulaire
 
 // Création de la fonction de validation du formulaire
