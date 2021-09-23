@@ -42,24 +42,20 @@
                                 <p></p>
                             </div>
 
-                            <form>
+                            <form method="GET" action="shop.html" id="form-command">
                                 <label for="quantity">Quantité :</label>
                                 <input type="number" name="quantity" id="quantity">
 
                                 <div class="color-choice">
                                     <label for="varnish">Vernis du produit :</label>
                                     <select name="varnish" id="option-varnish">
-                                        <option value="0">Tan</option>
-                                        <option value="1">Chocolate</option>
-                                        <option value="2">Black</option>
-                                        <option value="3">White</option>
                                     </select>
                                 </div>
                             </form>
 
                             <div class="product-menu">
-                                <a href="../../index.html"><button><i class="fas fa-sign-in-alt fa-rotate-180"></i> Retourner à l'accueil</button></a>
-                                <a href="shop.html"><button>Ajouter au panier <i class="fas fa-plus"></i></button></a>
+                                <a href="../../index.html"><i class="fas fa-sign-in-alt fa-rotate-180"></i> Retourner à l'accueil</a>
+                                <button type="submit" form="form-command">Ajouter au panier <i class="fas fa-plus"></i></button>
                             </div>
                         </figcaption>
                     </figure>

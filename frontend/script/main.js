@@ -63,32 +63,3 @@ function main (){
         })
     }
 }
-
-
-
-// callApi();
-
-// function callApi (){
-//     fetch("http://localhost:3000/api/furniture") 
-//     .then(function(response){  
-//         return response.json() 
-//     .then(function(resultApi){ 
-//         console.log(resultApi);
-
-//        let cardProduct = ""; 
-        
-//         for(let product of resultApi){ 
-//             cardProduct += `<a href="frontend/pages/product.html?${product._id}" class:"product-listing"><figure><img src="${product.imageUrl}"/><figcaption><p>${product.name}</p><p>${product.price/100}€</p></figcaption></figure></a>`;
-//         }
-        
-//         document.querySelector('.products-error').style.display = "none";
-//         cardProduct += `<a href="#" id="most-arrow"><i class="fas fa-angle-double-right fa-5x"></i>Voir plus de produits</a>`;
-//         document.querySelector('.products').innerHTML = cardProduct;
-//     })
-//     })
-
-//        .catch(error => {
-//         let cardProductErr = "<p>Nos produits sont malheureusement indisponibles pour le moment. </br> Veuillez nous excuser pour ce désagrément ! </br></br> (Vérifiez que le serveur local (port 3000) est bien activé et que votre navigateur supporte javascript)</p>";
-//         document.querySelector('.products-error').innerHTML = cardProductErr;
-//     });
-// } 

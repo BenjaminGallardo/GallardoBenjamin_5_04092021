@@ -33,6 +33,13 @@ async function pageProduct (){
 
         let descriptionProduct = document.querySelector('.description-product p');
         descriptionProduct.innerText = `${product.description}`;
+
+        let varnishProduct = document.getElementById('option-varnish');
+        for(let i in product.varnish){
+            let optionVarnish = document.createElement('option');
+            optionVarnish.innerText = `${product.varnish[i]}`; 
+            varnishProduct.appendChild(optionVarnish);
+        }  
     }
 }
 
