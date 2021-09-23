@@ -1,16 +1,16 @@
-pageProduct();
+pageProduct(); // Création de la fonction globale d'affichage des produits sur la page
 
-async function pageProduct (){
+async function pageProduct (){ // On diffère la fonction car l'on récupère directement un élément de l'api et ceux avec await directement sur la fonction du fetch
 
     const productId = getProductId();
     const product = await getProduct(productId);
     viewProduct(product);
 
-    function getProductId(){
+    function getProductId(){ // On récupère une nouvelle URL pour afficher seulement le produit spécifié
         return new URL(location.href).searchParams.get("id");
     }
 
-    function getProduct(productId){
+    function getProduct(productId){ // On récupère directement à l'API les informations du produits à récupérer
         return fetch(`http://localhost:3000/api/furniture/${productId}`) 
         .then(function(response){
             return response.json();
@@ -21,7 +21,7 @@ async function pageProduct (){
         })
     }
 
-    function viewProduct(product){
+    function viewProduct(product){ // Fonction d'affichage des produits
         let imageProduct = document.querySelector('.image-product');
         imageProduct.src = `${product.imageUrl}`;
 

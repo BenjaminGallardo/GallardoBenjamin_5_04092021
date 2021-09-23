@@ -59,7 +59,7 @@
                         <article class="command">
                             <h2>Passez votre commande</h2>
 
-                            <form method="POST">
+                            <form method="POST" action="summary.html" id="form-payment">
                                 <div class="formstyle">
                                     <label for="lastname">Nom :</label>
                                     <input type="text" name="name" id="lastname">
@@ -104,7 +104,7 @@
                             </form>
 
                             <div class="buttonstyle">
-                                <a href="summary.html"><button type="submit">Procéder au paiement</button></a>
+                                <button type="submit" form="form-payment">Procéder au paiement</button>
                             </div>
                         </article>
                     </div>

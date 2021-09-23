@@ -1,10 +1,10 @@
-main();
+main(); // FOnction globale de la page d'index
 
 function main (){
 
     getProducts();
 
-    function getProducts(){
+    function getProducts(){ // Appel de l'API et affichage des éléments via l'API
 
         fetch('http://localhost:3000/api/furniture') 
         .then(function(response){
@@ -12,10 +12,8 @@ function main (){
         })
 
         .then(function(resultApi){
-            console.log(resultApi);
             
             const divProducts = document.querySelector('.products');
-            console.log(divProducts);
 
             for(const product of resultApi){
 
@@ -52,6 +50,8 @@ function main (){
             const asideError = document.querySelector('.products-error');
             asideError.style.display = 'none';
         })
+
+        // EN cas d'erreur un message spécifique s'affiche
 
         .catch(function (error){
             const asideError = document.querySelector('.products-error');
