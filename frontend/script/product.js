@@ -41,5 +41,27 @@ async function pageProduct (){ // On diffère la fonction car l'on récupère di
             varnishProduct.appendChild(optionVarnish);
         }  
     }
-}
 
+    saveProductInShop();
+
+    function saveProductInShop(){
+        const btnForm = document.querySelector('#btn-form');
+        inputQuantity = document.querySelector('#quantity');
+
+        btnForm.addEventListener('submit', function(effect){
+            effect.preventDefault();
+        })
+
+        btnForm.addEventListener('click', function(){
+
+            localStorage.setItem('nameProduct', `${product.name}`)
+            console.log(localStorage.getItem('nameProduct'));
+
+            localStorage.setItem('quantityProduct', `${inputQuantity.value}`);
+            console.log(localStorage.getItem('quantityProduct'));
+
+            localStorage.setItem('priceProduct', `${product.price/100}`)
+            console.log(localStorage.getItem(`priceProduct`));
+        })
+    }
+}

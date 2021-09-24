@@ -1,9 +1,33 @@
+viewProductInShop();
+
+function viewProductInShop() {
+    const lineArray = document.querySelector('tbody tr');
+    
+    const lineNameArray = document.createElement('td');
+    lineNameArray.innerHTML = localStorage.getItem('nameProduct');
+    lineArray.appendChild(lineNameArray);
+
+    const lineQuantityArray = document.createElement('td');
+    lineQuantityArray.innerHTML = parseInt(localStorage.getItem('quantityProduct'));
+    lineArray.appendChild(lineQuantityArray);
+
+    const linePriceArray = document.createElement('td');
+    linePriceArray.innerHTML = `${parseInt(localStorage.getItem('priceProduct'))} €`;
+    lineArray.appendChild(linePriceArray);
+
+    const lineTotalArray = document.createElement('td');
+    lineTotalArray.innerHTML = `${parseInt(localStorage.getItem('priceProduct')) * parseInt(localStorage.getItem('quantityProduct'))} €`;;
+    lineArray.appendChild(lineTotalArray);
+}
+
+
 form(); // Appel de la fonction de contrôle des données du formulaire
 
 // Création de la fonction de validation du formulaire
 
 function form (){
 
+    const allInput = document.querySelectorAll('input');
     const inputLastname = document.querySelector('#lastname');
     const inputFirstname = document.querySelector('#firstname');
     const inputAddress = document.querySelector('#address');
@@ -12,6 +36,7 @@ function form (){
     const inputEmail = document.querySelector('#email');
     const allImgValid = document.querySelectorAll('.valid');
     const allImgError = document.querySelectorAll('.error');
+    const btnForm = document.querySelector('#btn-command');
     
     // Input Nom
     
@@ -96,3 +121,4 @@ function form (){
         }
     })
 }
+

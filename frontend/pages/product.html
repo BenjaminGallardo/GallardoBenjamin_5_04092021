@@ -44,7 +44,7 @@
 
                             <form method="GET" action="shop.html" id="form-command">
                                 <label for="quantity">Quantité :</label>
-                                <input type="number" name="quantity" id="quantity">
+                                <input type="number" name="quantity" id="quantity" value="1" min="1">
 
                                 <div class="color-choice">
                                     <label for="varnish">Vernis du produit :</label>
@@ -55,7 +55,7 @@
 
                             <div class="product-menu">
                                 <a href="../index.html"><i class="fas fa-sign-in-alt fa-rotate-180"></i> Retourner à l'accueil</a>
-                                <button type="submit" form="form-command">Ajouter au panier <i class="fas fa-plus"></i></button>
+                                <button type="submit" form="form-command" id="btn-form">Ajouter au panier <i class="fas fa-plus"></i></button>
                             </div>
                         </figcaption>
                     </figure>
