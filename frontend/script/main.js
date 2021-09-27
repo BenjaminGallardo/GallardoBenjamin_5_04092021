@@ -1,9 +1,9 @@
-main(); // FOnction globale de la page d'index
+main(); // Fonction globale de la page d'index
 
 function main (){
 
     getProducts();
-
+    
     function getProducts(){ // Appel de l'API et affichage des éléments via l'API
 
         fetch('http://localhost:3000/api/furniture') 

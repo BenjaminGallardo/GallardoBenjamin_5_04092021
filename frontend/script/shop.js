@@ -4,17 +4,17 @@ viewProductInShop(); // Fonction permettant l'affichafe des produits sur la page
 function viewProductInShop() {
 
     const divContentShop = document.querySelector('.priceandcommand');
-    const divError = document.querySelector('.error');
+    const divEmptyShop = document.querySelector('.empty-shop');
 
     if(localStorage.getItem('products') === null){ // Dans le cas où le localstorage est vide et donc que le panier est vide 
         divContentShop.style.display = "none";
-        let msgError = document.createElement('p');
-        msgError.innerText = 'Oups.. Votre panier est vide !';
-        divError.appendChild(msgError);
+        let msgEmptyShop = document.createElement('p');
+        msgEmptyShop.innerText = 'Oups.. Votre panier est vide !';
+        divEmptyShop.appendChild(msgEmptyShop);
     
     } else {
         
-        divError.style.display = "none";
+        divEmptyShop.style.display = "none";
         const bodyArray = document.querySelector('tbody');
         let productInLocalStorage = JSON.parse(localStorage.getItem('products')); // On récupère notre tableau sous format Javascript
 
@@ -102,7 +102,7 @@ function form (){
     // Input Code Postal
     
     inputZipcode.addEventListener('input', function(content){
-        if(content.target.value.length >= 5 && content.target.value.length <= 15){
+        if(content.target.value.length >= 5 && content.target.value.length <= 7){
             allImgValid[3].style.display = "inline";
             allImgError[3].style.display = "none";
     
@@ -143,4 +143,5 @@ function form (){
         }
     })
 }
+
 

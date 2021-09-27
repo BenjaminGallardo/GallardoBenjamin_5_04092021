@@ -607,15 +607,10 @@ footer a:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  min-height: 70vh;
 }
 
-@media screen and (min-width: 1440px) {
-  .container-shop {
-    height: 80vh;
-  }
-}
-
-.container-shop .error {
+.container-shop .empty-shop {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -626,10 +621,10 @@ footer a:hover {
       -ms-flex-align: center;
           align-items: center;
   width: 100%;
-  height: 80vh;
+  min-height: 80vh;
 }
 
-.container-shop .error p {
+.container-shop .empty-shop p {
   text-align: center;
   font-family: "IM Fell English";
   font-size: 18px;
