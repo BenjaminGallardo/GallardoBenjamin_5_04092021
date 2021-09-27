@@ -1,23 +1,45 @@
-viewProductInShop();
+viewProductInShop(); // Fonction permettant l'affichafe des produits sur la page panier
+
 
 function viewProductInShop() {
-    const lineArray = document.querySelector('tbody tr');
+
+    const divContentShop = document.querySelector('.priceandcommand');
+    const divError = document.querySelector('.error');
+
+    if(localStorage.getItem('products') === null){ // Dans le cas où le localstorage est vide et donc que le panier est vide 
+        divContentShop.style.display = "none";
+        let msgError = document.createElement('p');
+        msgError.innerText = 'Oups.. Votre panier est vide !';
+        divError.appendChild(msgError);
     
-    const lineNameArray = document.createElement('td');
-    lineNameArray.innerHTML = localStorage.getItem('nameProduct');
-    lineArray.appendChild(lineNameArray);
+    } else {
+        
+        divError.style.display = "none";
+        const bodyArray = document.querySelector('tbody');
+        let productInLocalStorage = JSON.parse(localStorage.getItem('products')); // On récupère notre tableau sous format Javascript
 
-    const lineQuantityArray = document.createElement('td');
-    lineQuantityArray.innerHTML = parseInt(localStorage.getItem('quantityProduct'));
-    lineArray.appendChild(lineQuantityArray);
+        for(let product in productInLocalStorage){ //On parcours notre tableau d'objet pour afficher les produits dans le tableau du panier
 
-    const linePriceArray = document.createElement('td');
-    linePriceArray.innerHTML = `${parseInt(localStorage.getItem('priceProduct'))} €`;
-    lineArray.appendChild(linePriceArray);
+            const lineArray = document.createElement('tr');
+            bodyArray.appendChild(lineArray);
 
-    const lineTotalArray = document.createElement('td');
-    lineTotalArray.innerHTML = `${parseInt(localStorage.getItem('priceProduct')) * parseInt(localStorage.getItem('quantityProduct'))} €`;;
-    lineArray.appendChild(lineTotalArray);
+            const lineNameArray = document.createElement('td');
+            lineNameArray.innerHTML = productInLocalStorage[product].name;
+            lineArray.appendChild(lineNameArray);
+
+            const lineQuantityArray = document.createElement('td');
+            lineQuantityArray.innerHTML = productInLocalStorage[product].quantity;
+            lineArray.appendChild(lineQuantityArray);
+
+            const linePriceArray = document.createElement('td');
+            linePriceArray.innerHTML = `${productInLocalStorage[product].price} €`;
+            lineArray.appendChild(linePriceArray);
+
+            const lineTotalArray = document.createElement('td');
+            lineTotalArray.innerHTML = `${productInLocalStorage[product].price * productInLocalStorage[product].quantity} €`;
+            lineArray.appendChild(lineTotalArray);
+        }
+    }
 }
 
 

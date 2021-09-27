@@ -42,26 +42,30 @@ async function pageProduct (){ // On diffère la fonction car l'on récupère di
         }  
     }
 
-    saveProductInShop();
+    saveProductInShop(); // On créer la fonction qui va sauvegarder nos produis dans un tableau
 
     function saveProductInShop(){
         const btnForm = document.querySelector('#btn-form');
         inputQuantity = document.querySelector('#quantity');
 
-        btnForm.addEventListener('submit', function(effect){
+        btnForm.addEventListener('submit', function(effect){ // On supprime l'effet 'submit' du bouton
             effect.preventDefault();
         })
 
-        btnForm.addEventListener('click', function(){
+        btnForm.addEventListener('click', function(){ 
+            let arrayInLocalStorage = []; // Tableau du LocalStorage qui va contenir les objets produits
 
-            localStorage.setItem('nameProduct', `${product.name}`)
-            console.log(localStorage.getItem('nameProduct'));
+            let productGoShop = {
+                name : product.name,
+                quantity : inputQuantity.value, // On créé un objet qui contiendra les données de notre produit sélectionné
+                price : product.price/100
+            };
 
-            localStorage.setItem('quantityProduct', `${inputQuantity.value}`);
-            console.log(localStorage.getItem('quantityProduct'));
-
-            localStorage.setItem('priceProduct', `${product.price/100}`)
-            console.log(localStorage.getItem(`priceProduct`));
+            if(localStorage.getItem('products') !== null){ // Si le localstorage n'est pas null, soit qu'il contient quelque chose alors :
+                arrayInLocalStorage = JSON.parse(localStorage.getItem('products')); // On récupère l'information puis on l'ajoutera au contenant supllémentaire s'ajoutant ci-dessous
+            }
+            arrayInLocalStorage.push(productGoShop); // Ici on ajoute notre nouvel élément au tableau existant
+            localStorage.setItem('products', JSON.stringify(arrayInLocalStorage)); //On ajoute à notre clé produits un nouveau tableau au format JSON
         })
     }
 }
