@@ -21,12 +21,19 @@ async function pageProduct (){ // On diffère la fonction car l'on récupère di
         })
     }
 
-    function viewProduct(product){ // Fonction d'affichage des produits
-        let imageProduct = document.querySelector('.image-product');
-        imageProduct.src = `${product.imageUrl}`;
+    function viewProduct(product){ // Fonction d'affichage des produits*
 
-        let nameProduct = document.querySelector('.title-price h2');
+        const productCard = document.querySelector('figure');
+
+        let imageProduct = document.createElement('img');
+        imageProduct.classList.add('image-product');
+        imageProduct.src = product.imageUrl;
+        productCard.prepend(imageProduct);
+        
+        const divNameProduct = document.querySelector('.title-price');
+        let nameProduct = document.createElement('h2');
         nameProduct.innerText = `${product.name}`;
+        divNameProduct.prepend(nameProduct);
 
         let priceProduct = document.querySelector('.title-price p');
         priceProduct.innerText = `${product.price/100}€`;

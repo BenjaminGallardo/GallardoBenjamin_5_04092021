@@ -11,12 +11,12 @@ function viewProductInShop() {
         let msgEmptyShop = document.createElement('p');
         msgEmptyShop.innerText = 'Oups.. Votre panier est vide !';
         divEmptyShop.appendChild(msgEmptyShop);
+        divEmptyShop.style.display = 'flex';
     
     } else {
-        
-        divEmptyShop.style.display = "none";
         const bodyArray = document.querySelector('tbody');
         let productInLocalStorage = JSON.parse(localStorage.getItem('products')); // On récupère notre tableau sous format Javascript
+        let priceTotal = [];
 
         for(let product in productInLocalStorage){ //On parcours notre tableau d'objet pour afficher les produits dans le tableau du panier
 
@@ -32,13 +32,30 @@ function viewProductInShop() {
             lineArray.appendChild(lineQuantityArray);
 
             const linePriceArray = document.createElement('td');
-            linePriceArray.innerHTML = `${productInLocalStorage[product].price} €`;
+            linePriceArray.innerHTML = `${productInLocalStorage[product].price}€`;
             lineArray.appendChild(linePriceArray);
 
             const lineTotalArray = document.createElement('td');
-            lineTotalArray.innerHTML = `${productInLocalStorage[product].price * productInLocalStorage[product].quantity} €`;
+            lineTotalArray.innerHTML = `${productInLocalStorage[product].price * productInLocalStorage[product].quantity}€`;
             lineArray.appendChild(lineTotalArray);
+
+            priceTotal.push(productInLocalStorage[product].price * productInLocalStorage[product].quantity) 
         }
+
+        const subTotal = document.querySelector('tfoot tr td:last-child');
+        const reducer = (previousValue, currentValue) => previousValue + currentValue;
+        subTotal.innerHTML = `${priceTotal.reduce(reducer)}€`;
+
+        const btnRemove = document.querySelector('.btn-remove');
+        btnRemove.addEventListener('click', function(){
+            divContentShop.style.display = 'none';
+            divEmptyShop.style.display = 'flex';
+            let msgEmptyShop = document.createElement('p');
+            msgEmptyShop.innerText = 'Oups.. Votre panier est vide !';
+            divEmptyShop.appendChild(msgEmptyShop);
+            localStorage.removeItem('products');
+        })
+
     }
 }
 
@@ -49,7 +66,6 @@ form(); // Appel de la fonction de contrôle des données du formulaire
 
 function form (){
 
-    const allInput = document.querySelectorAll('input');
     const inputLastname = document.querySelector('#lastname');
     const inputFirstname = document.querySelector('#firstname');
     const inputAddress = document.querySelector('#address');
@@ -63,7 +79,7 @@ function form (){
     // Input Nom
     
     inputLastname.addEventListener('input', function(content){
-        if(content.target.value.length >= 2 && content.target.value.length <= 20){
+        if(content.target.value.length > 2 && content.target.value.length <= 20){
             allImgValid[0].style.display = "inline";
             allImgError[0].style.display = "none";
     
@@ -89,7 +105,7 @@ function form (){
     // Input Adresse
     
     inputAddress.addEventListener('input', function(content){
-        if(content.target.value.length >= 2 && content.target.value.length <= 100){
+        if(content.target.value.length > 2 && content.target.value.length <= 100){
             allImgValid[2].style.display = "inline";
             allImgError[2].style.display = "none";
     

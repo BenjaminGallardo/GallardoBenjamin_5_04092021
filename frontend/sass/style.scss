@@ -256,7 +256,7 @@
     min-height: 70vh;
 
     .empty-shop {
-        display: flex;
+        display: none;
         justify-content: center;
         align-items: center;
         width: 100%;
@@ -317,6 +317,23 @@
             td {
                 padding: 0.5em;
                 text-align: center;
+            }
+        }
+
+        button {
+            margin: 0.5em 0em 1em;
+            padding: 0.5em;
+            border: none;
+            background-color: $color-primary;
+            border: solid 2px black;
+            border-radius: 1em;
+            font-family: $font-title;
+            color: $color-secondary;
+            cursor: pointer;
+            font-size: 20px;
+
+            &:hover {
+                transform: scale(1.05);
             }
         }
     }

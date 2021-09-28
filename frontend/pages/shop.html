@@ -48,54 +48,62 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr>
-                                    </tr>
                                 </tbody>
+                                <tfoot>
+                                    <tr>
+                                        <td></td>
+                                        <td></td>
+                                        <td>Sous-Total:</td>
+                                        <td></td>
+                                    </tr>
+                                </tfoot>
                             </table>
+
+                            <button class="btn-remove"> Vider le panier</button>
                         </article>
 
                         <article class="command">
                             <h2>Passez votre commande</h2>
 
-                            <form id="form-payment">
+                            <form method="POST" action="summary.html" id="form-payment">
                                 <div class="formstyle">
                                     <label for="lastname">Nom :</label>
-                                    <input type="text" name="name" id="lastname">
+                                    <input type="text" name="name" id="lastname" required>
                                     <img src="../pictures/valid.png" alt="valid" class="valid">
                                     <img src="../pictures/error.png" alt="valid" class="error">
                                 </div>
 
                                 <div class="formstyle">
                                     <label for="firstname">Prénom :</label>
-                                    <input type="text" name="firstname" id="firstname">
+                                    <input type="text" name="firstname" id="firstname" required>
                                     <img src="../pictures/valid.png" alt="valid" class="valid">
                                     <img src="../pictures/error.png" alt="valid" class="error">
                                 </div>
 
                                 <div class="formstyle">
                                     <label for="address">Adresse :</label>
-                                    <input type="text" name="address" id="address">
+                                    <input type="text" name="address" id="address" required>
                                     <img src="../pictures/valid.png" alt="valid" class="valid">
                                     <img src="../pictures/error.png" alt="valid" class="error">
                                 </div>
 
                                 <div class="formstyle">
                                     <label for="zipcode">Code Postal : </label>
-                                    <input type="text" name="zipcode" id="zipcode">
+                                    <input type="text" name="zipcode" id="zipcode" required>
                                     <img src="../pictures/valid.png" alt="valid" class="valid">
                                     <img src="../pictures/error.png" alt="valid" class="error">
                                 </div>
 
                                 <div class="formstyle">
                                     <label for="city">Ville : </label>
-                                    <input type="text" name="city" id="city">
+                                    <input type="text" name="city" id="city" required>
                                     <img src="../pictures/valid.png" alt="valid" class="valid">
                                     <img src="../pictures/error.png" alt="valid" class="error">
                                 </div>
 
                                 <div class="formstyle">
                                     <label for="email">Email :</label>
-                                    <input type="email" name="email" id="email">
+                                    <input type="email" name="email" id="email" required>
                                     <img src="../pictures/valid.png" alt="valid" class="valid">
                                     <img src="../pictures/error.png" alt="valid" class="error">
                                 </div>
