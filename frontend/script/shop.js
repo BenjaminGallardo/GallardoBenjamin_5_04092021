@@ -59,13 +59,13 @@ function viewProductInShop() {
     }
 }
 
-
 form(); // Appel de la fonction de contrôle des données du formulaire
 
 // Création de la fonction de validation du formulaire
 
 function form (){
 
+    const allInput = document.querySelectorAll("form input");
     const inputLastname = document.querySelector('#lastname');
     const inputFirstname = document.querySelector('#firstname');
     const inputAddress = document.querySelector('#address');
@@ -75,7 +75,7 @@ function form (){
     const allImgValid = document.querySelectorAll('.valid');
     const allImgError = document.querySelectorAll('.error');
     const btnForm = document.querySelector('#btn-command');
-    
+
     // Input Nom
     
     inputLastname.addEventListener('input', function(content){

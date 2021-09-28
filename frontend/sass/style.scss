@@ -117,10 +117,7 @@
     justify-content: center;
     align-items: center;
     font-family: $font-text;
-
-    @include laptopM {
-        padding: 10em;
-    }
+    min-height: 70vh;
 
     figure {
         display: flex;
