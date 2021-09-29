@@ -36,7 +36,7 @@ function viewSummary() { // Grâce à cette fonction on réalise l'affichage sur
     
     const btnReturn = document.querySelector('button');
     btnReturn.addEventListener('click', function(){
-        window.location.replace("../index.html"); // Replace ne conserve pas l'historique de la page donc pas de retour possible sur la page recapitulative
+    window.location.replace("../index.html"); // Replace ne conserve pas l'historique de la page donc pas de retour possible sur la page recapitulative
     })
 }
 
