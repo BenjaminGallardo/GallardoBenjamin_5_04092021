@@ -79,8 +79,8 @@ function form (){
 
     // Input Nom
     
-    inputLastname.addEventListener('input', function(content){
-        if(content.target.value.length > 2 && content.target.value.length <= 20){
+    inputLastname.addEventListener('input', function(event){
+        if(event.target.value.length > 2 && event.target.value.length <= 20){
             allImgValid[0].style.display = "inline";
             allImgError[0].style.display = "none";
     
@@ -92,8 +92,8 @@ function form (){
     
     // Input Prénom
     
-    inputFirstname.addEventListener('input', function(content){
-        if(content.target.value.length >= 2 && content.target.value.length <= 20){
+    inputFirstname.addEventListener('input', function(event){
+        if(event.target.value.length >= 2 && event.target.value.length <= 20){
             allImgValid[1].style.display = "inline";
             allImgError[1].style.display = "none";
     
@@ -105,8 +105,8 @@ function form (){
     
     // Input Adresse
     
-    inputAddress.addEventListener('input', function(content){
-        if(content.target.value.length > 2 && content.target.value.length <= 100){
+    inputAddress.addEventListener('input', function(event){
+        if(event.target.value.length > 2 && event.target.value.length <= 100){
             allImgValid[2].style.display = "inline";
             allImgError[2].style.display = "none";
     
@@ -118,8 +118,8 @@ function form (){
     
     // Input Code Postal
     
-    inputZipcode.addEventListener('input', function(content){
-        if(content.target.value.length >= 5 && content.target.value.length <= 7){
+    inputZipcode.addEventListener('input', function(event){
+        if(event.target.value.length >= 5 && event.target.value.length <= 7){
             allImgValid[3].style.display = "inline";
             allImgError[3].style.display = "none";
     
@@ -131,8 +131,8 @@ function form (){
     
     // Input Commune
     
-    inputCity.addEventListener('input', function(content){
-        if(content.target.value.length >= 2 && content.target.value.length <= 50){
+    inputCity.addEventListener('input', function(event){
+        if(event.target.value.length >= 2 && event.target.value.length <= 50){
             allImgValid[4].style.display = "inline";
             allImgError[4].style.display = "none";
     
@@ -149,12 +149,12 @@ function form (){
     // 'S' match tout les caractères qui ne sont pas des espaces 
     // '+' match tout les nombres indéfini
     
-    inputEmail.addEventListener('input', function(content){
-        if(content.target.value.search(regexEmail) === 0){
+    inputEmail.addEventListener('input', function(event){
+        if(event.target.value.search(regexEmail) === 0){
             allImgValid[5].style.display = "inline";
             allImgError[5].style.display = "none";
     
-        } else if (content.target.value.search(regexEmail) === -1){
+        } else if (event.target.value.search(regexEmail) === -1){
             allImgError[5].style.display = "inline";
             allImgValid[5].style.display = "none";
         }

@@ -72,7 +72,21 @@ async function pageProduct (){ // On diffère la fonction car l'on récupère di
             if(localStorage.getItem('products') !== null){ // Si le localstorage n'est pas null, soit qu'il contient quelque chose alors :
                 arrayInLocalStorage = JSON.parse(localStorage.getItem('products')); // On récupère l'information puis on l'ajoutera au contenant supllémentaire s'ajoutant ci-dessous
             }
-            arrayInLocalStorage.push(productGoShop); // Ici on ajoute notre nouvel élément au tableau existant
+
+            let productInShop = false;
+
+            for(let product of arrayInLocalStorage){
+
+                if(product.id == productGoShop.id){
+                    product.quantity = parseInt(product.quantity) + 1;
+                    productInShop = true;
+                }
+            }
+
+            if(productInShop == false){
+                arrayInLocalStorage.push(productGoShop); // Ici on ajoute notre nouvel élément au tableau existant
+            }
+
             localStorage.setItem('products', JSON.stringify(arrayInLocalStorage)); //On ajoute à notre clé produits un nouveau tableau au format JSON
         })
     }
