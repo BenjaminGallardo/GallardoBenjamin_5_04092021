@@ -35,27 +35,28 @@ function viewProductInShop() {
             linePriceArray.innerHTML = `${productInLocalStorage[product].price}€`;
             lineArray.appendChild(linePriceArray);
 
-            const lineTotalArray = document.createElement('td');
-            lineTotalArray.innerHTML = `${productInLocalStorage[product].price * productInLocalStorage[product].quantity}€`;
-            lineArray.appendChild(lineTotalArray);
+            const lineSubTotalArray = document.createElement('td');
+            lineSubTotalArray.innerHTML = `${productInLocalStorage[product].price * productInLocalStorage[product].quantity}€`;
+            lineArray.appendChild(lineSubTotalArray);
 
-            priceTotal.push(productInLocalStorage[product].price * productInLocalStorage[product].quantity) 
+            priceTotal.push(productInLocalStorage[product].price * productInLocalStorage[product].quantity) // On récupère chaque prix total que l'on insère dans le tableau créé au préalable
         }
 
-        const subTotal = document.querySelector('tfoot tr td:last-child');
+        const tdPriceFinal = document.querySelector('tfoot tr td:last-child'); 
         const reducer = (previousValue, currentValue) => previousValue + currentValue;
-        subTotal.innerHTML = `${priceTotal.reduce(reducer)}€`;
+        let priceFinal = priceTotal.reduce(reducer);
+        localStorage.setItem('priceTotal', JSON.stringify(priceFinal)); // On ajoute le prix final dans le local storage pour le réutiliser dans le sommaire
+        tdPriceFinal.innerHTML = `${priceFinal}€`; // On ajoute tout les totaux récupéré dans le tableau afin de les aditionner et de faire un total
 
         const btnRemove = document.querySelector('.btn-remove');
-        btnRemove.addEventListener('click', function(){
+        btnRemove.addEventListener('click', function(){ // Ici on créé la possibilité de vider le panier
             divContentShop.style.display = 'none';
             divEmptyShop.style.display = 'flex';
             let msgEmptyShop = document.createElement('p');
-            msgEmptyShop.innerText = 'Oups.. Votre panier est vide !';
+            msgEmptyShop.innerText = 'Oups.. Votre panier est vide !'; // Le message à afficher en cas de panier vide
             divEmptyShop.appendChild(msgEmptyShop);
             localStorage.removeItem('products');
         })
-
     }
 }
 

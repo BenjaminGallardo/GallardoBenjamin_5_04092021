@@ -65,7 +65,8 @@ async function pageProduct (){ // On diffère la fonction car l'on récupère di
             let productGoShop = {
                 name : product.name,
                 quantity : inputQuantity.value, // On créé un objet qui contiendra les données de notre produit sélectionné
-                price : product.price/100
+                price : product.price/100,
+                id : product._id
             };
 
             if(localStorage.getItem('products') !== null){ // Si le localstorage n'est pas null, soit qu'il contient quelque chose alors :
