@@ -837,6 +837,29 @@ footer a:hover {
 }
 
 .recap-command .recap p {
+  font-family: "Roboto Mono", monospace;
+}
+
+.recap-command .recap p em {
+  text-decoration: underline;
+  font-size: 18px;
   font-family: "IM Fell English";
+}
+
+.recap-command button {
+  background-color: #593f36;
+  border: solid 2px black;
+  border-radius: 1em;
+  margin-top: 1em;
+  padding: 0.5em 1em;
+  font-family: "Anton", sans-serif;
+  color: #e1d7c1;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.recap-command button:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
 }
 /*# sourceMappingURL=style.css.map */

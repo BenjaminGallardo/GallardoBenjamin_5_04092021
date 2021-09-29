@@ -450,7 +450,29 @@
         }
 
         p {
-            font-family: $font-text;
+            font-family: $font-price;
+
+            em {
+                text-decoration: underline;
+                font-size: 18px;
+                font-family: $font-text;
+            }
+        }
+    }
+
+    button {
+        background-color: $color-secondary;
+        border: solid 2px black;
+        border-radius: 1em;
+        margin-top: 1em;
+        padding: 0.5em 1em;
+        font-family: $font-title;
+        color: $color-primary;
+        cursor: pointer;
+        font-size: 20px;
+
+        &:hover {
+            transform: scale(1.05);
         }
     }
 } 
