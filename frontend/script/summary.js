@@ -20,16 +20,6 @@ function viewSummary() { // Grâce à cette fonction on réalise l'affichage sur
     priceFinal.innerHTML = ` ${totalPriceInLocalStorage}€`;
     titreTotalSummary.appendChild(priceFinal);
 
-    // Ici on va définir un numéro de commande aléatoire
-
-    const random1 = Math.random().toString(36).substr(5,15); // Math.random renvoie un nombre entre 0 et 1
-    const random2 = Math.random().toString(36).substr(5,15); 
-    const random3 = Math.random().toString(36).substr(5,15);
-
-    const numCommand = document.createElement('p');
-    numCommand.innerHTML = `<em>Identifiant de commande :</em> ${random1}-${random2}-${random3}`;
-    sectionRecap.appendChild(numCommand);
-
     localStorage.clear(); // On supprime tout le LocalStorage pour permettre 
     
     // Retour à l'accueil via boutton

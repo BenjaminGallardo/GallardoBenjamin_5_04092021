@@ -60,13 +60,12 @@ function viewProductInShop() {
     }
 }
 
-form(); // Appel de la fonction de contrôle des données du formulaire
+validationAndSendForm(); // Appel de la fonction de contrôle des données du formulaire
 
 // Création de la fonction de validation du formulaire
 
-function form (){
+function validationAndSendForm (){
 
-    const allInput = document.querySelectorAll("form input");
     const inputLastname = document.querySelector('#lastname');
     const inputFirstname = document.querySelector('#firstname');
     const inputAddress = document.querySelector('#address');
@@ -83,10 +82,12 @@ function form (){
         if(event.target.value.length > 2 && event.target.value.length <= 20){
             allImgValid[0].style.display = "inline";
             allImgError[0].style.display = "none";
+            btnForm.setAttribute('form',"form-payment");
     
         } else {
             allImgError[0].style.display = "inline";
             allImgValid[0].style.display = "none";
+            btnForm.setAttribute('form',"");
         }
     })
     
@@ -96,10 +97,12 @@ function form (){
         if(event.target.value.length >= 2 && event.target.value.length <= 20){
             allImgValid[1].style.display = "inline";
             allImgError[1].style.display = "none";
+            btnForm.setAttribute('form',"form-payment");
     
         } else {
             allImgError[1].style.display = "inline";
             allImgValid[1].style.display = "none";
+            btnForm.setAttribute('form',"");
         }
     })
     
@@ -109,10 +112,12 @@ function form (){
         if(event.target.value.length > 2 && event.target.value.length <= 100){
             allImgValid[2].style.display = "inline";
             allImgError[2].style.display = "none";
+            btnForm.setAttribute('form',"form-payment");
     
         } else {
             allImgError[2].style.display = "inline";
             allImgValid[2].style.display = "none";
+            btnForm.setAttribute('form',"");
         }
     })
     
@@ -122,10 +127,12 @@ function form (){
         if(event.target.value.length >= 5 && event.target.value.length <= 7){
             allImgValid[3].style.display = "inline";
             allImgError[3].style.display = "none";
+            btnForm.setAttribute('form',"form-payment");
     
         } else {
             allImgError[3].style.display = "inline";
             allImgValid[3].style.display = "none";
+            btnForm.setAttribute('form',"");
         }
     })
     
@@ -135,10 +142,12 @@ function form (){
         if(event.target.value.length >= 2 && event.target.value.length <= 50){
             allImgValid[4].style.display = "inline";
             allImgError[4].style.display = "none";
+            btnForm.setAttribute('form',"form-payment");
     
         } else {
             allImgError[4].style.display = "inline";
             allImgValid[4].style.display = "none";
+            btnForm.setAttribute('form',"");
         }
     })
     
@@ -153,11 +162,33 @@ function form (){
         if(event.target.value.search(regexEmail) === 0){
             allImgValid[5].style.display = "inline";
             allImgError[5].style.display = "none";
+            btnForm.setAttribute('form',"form-payment");
     
         } else if (event.target.value.search(regexEmail) === -1){
             allImgError[5].style.display = "inline";
             allImgValid[5].style.display = "none";
+            btnForm.setAttribute('form',"");
         }
+    })
+
+    // Création de la méthode POST pour l'envoie des données au serveur si le formulaire est valide
+    // On commence par créé l'objet qui sera envoyé
+
+    btnForm.addEventListener('click', function(){
+        let productInLocalStorage = JSON.parse(localStorage.getItem('products')); 
+        let orderedProducts = [];
+        orderedProducts.push(productInLocalStorage);
+
+        const order = {
+            contact: {
+                firstName: inputFirstname.value,
+                lastName: inputLastname.value,
+                address: inputAddress.value,
+                city: inputCity.value,
+                email: inputEmail.value,
+            },
+            products: orderedProducts,
+        };  
     })
 }
 
