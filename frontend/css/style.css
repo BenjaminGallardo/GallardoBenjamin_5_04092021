@@ -782,7 +782,7 @@ footer a:hover {
 .recap-command {
   background-image: url("../pictures/ban.jpg");
   background-size: cover;
-  height: 80vh;
+  min-height: 80vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -802,7 +802,7 @@ footer a:hover {
   background-color: #e1d7c1;
   border-radius: 1em;
   padding: 1em 1em;
-  margin: 0 1em;
+  margin: 2em 1em 0em 1em;
 }
 
 .recap-command .recap h1 {
@@ -850,7 +850,7 @@ footer a:hover {
   background-color: #593f36;
   border: solid 2px black;
   border-radius: 1em;
-  margin-top: 1em;
+  margin: 1em 0em 1em 0em;
   padding: 0.5em 1em;
   font-family: "Anton", sans-serif;
   color: #e1d7c1;

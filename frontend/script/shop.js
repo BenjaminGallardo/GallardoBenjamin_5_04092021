@@ -55,7 +55,7 @@ function viewProductInShop() {
             let msgEmptyShop = document.createElement('p');
             msgEmptyShop.innerText = 'Oups.. Votre panier est vide !'; // Le message à afficher en cas de panier vide
             divEmptyShop.appendChild(msgEmptyShop);
-            localStorage.removeItem('products');
+            localStorage.clear();
         })
     }
 }
@@ -175,11 +175,15 @@ function validationAndSendForm (){
     // On commence par créé l'objet qui sera envoyé
 
     btnForm.addEventListener('click', function(){
-        let productInLocalStorage = JSON.parse(localStorage.getItem('products')); 
-        let orderedProducts = [];
-        orderedProducts.push(productInLocalStorage);
+        let productInLocalStorage = JSON.parse(localStorage.getItem('products'));
+        orderedProducts = [];
 
-        const order = {
+        for(let id in productInLocalStorage){
+            productId = productInLocalStorage[id].id;
+            orderedProducts.push(productId);
+        }
+
+        let order = {
             contact: {
                 firstName: inputFirstname.value,
                 lastName: inputLastname.value,
@@ -189,6 +193,17 @@ function validationAndSendForm (){
             },
             products: orderedProducts,
         };  
+
+        fetch('http://localhost:3000/api/furniture/order', {
+            method: "POST",
+            body: JSON.stringify(order),
+            headers: { "Content-Type": "application/json" }
+        })
+        .then(response => response.json())
+        .then(productOrder => {
+            localStorage.setItem('order', productOrder.orderId);
+        })
+        .catch(error => console.log(error));
     })
 }
 
