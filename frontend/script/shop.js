@@ -124,7 +124,7 @@ function validationAndSendForm (){
     // Input Code Postal
     
     inputZipcode.addEventListener('input', function(event){
-        if(event.target.value.length >= 5 && event.target.value.length <= 7){
+        if(event.target.value.length == 5){
             allImgValid[3].style.display = "inline";
             allImgError[3].style.display = "none";
             btnForm.setAttribute('form',"form-payment");
